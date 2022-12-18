@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Poppins&display=swap");
+
+#navBar {
+  background-color: #2f3542;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px black;
+  z-index: 4;
+}
+
+
+.rightNav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  padding-right: 3%;
+  margin-bottom: 0 !important;
+  column-gap: 20px;
+}
+
+.rightNav li {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  color: white;
+  padding: 0 30px 0 30px;
+}
+
+.rightNav-btn:hover {
+  color: #f1c40f;
+  cursor: pointer;
+}
+
+.leftNav {
+  width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.leftNav img {
+  padding-left: 5px;
+}
+
+.navBarImage {
+  width: 100px
+}
+
+.sidebarButton {
+  font-size: 45px;
+  color: white;
+  padding: 0px 30px;
+}
+
+.sidebarButton {
+  cursor: pointer;
+}
+
+
+.rightNav-btn{
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  height: 40%;
+  border: none;
+  background-color: transparent;
+}
+
+
+.form-outline{
+  margin-top: auto !important;
+}
+
+
+
+.material-symbols-outlined{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+
+}
