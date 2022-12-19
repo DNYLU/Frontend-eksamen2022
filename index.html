@@ -21,6 +21,7 @@
     <!-- Link til css -->
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/product.css" />
     <!-- Link til css -->
   </head>
 
@@ -33,26 +34,102 @@
           style="display: none"
           >menu</span
         >
-        <img class="navBarImage" src="images/1.png" alt="billede" />
+        <img class="navBarImage" src="images/1.png" alt="image" id="homepage-img" />
       </div>
       <ul class="rightNav">
-        <li  id="showCars-button" class="rightNav-btn">
-          SOMETHING
-        </li>
-        <li class="rightNav-btn" id="navbar-myAccount-button">MY ACCOUNT</li>
+        <li id="showCars-button" class="rightNav-btn">SOMETHING</li>
+        <li class="rightNav-btn" id="navbar-myAccount-button">MY DELIVERIES</li>
       </ul>
     </nav>
     <!--NAVBAR-->
 
-    <div class="container">
+    <div class="container"></div>
 
+
+
+
+
+    
+    <div
+  class="modal fade"
+  id="addProductModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ADD PRODUCT</h5>
+        <button
+          type="button"
+          class="close btn"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form style="color: rgb(0, 0, 0); position: relative">
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              id="createProductInput-name"
+              class="form-control form-control-lg"
+              placeholder="Enter product name"
+            />
+            <label class="form-label" for="createProductInput-name"
+              >NAME</label
+            >
+          </div>
+          <div class="form-outline mb-4">
+            <input
+              type="number"
+              id="createProductInput-price"
+              class="form-control form-control-lg"
+              placeholder="Enter product price"
+            />
+            <label class="form-label" for="createProductInput-price"
+              >PRICE</label
+            >
+          </div>
+          <div class="form-outline">
+            <input
+              type="number"
+              id="createProductInput-weight"
+              class="form-control form-control-lg"
+              placeholder="Enter product weight in grams"
+            />
+            <label class="form-label" for="createProductInput-weight"
+              >WEIGHT IN GRAMS</label
+            >
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="createProduct-submitButton"
+          class="btn button form-submitButton"
+        >
+          ADD PRODUCT
+        </button>
+      </div>
     </div>
+  </div>
+</div>
+
+
+
 
     <!--------------------------------------------JavaScript---------------------------------------------->
-  
-
-
-
+    <script src="javascript/handler/fetch.js"></script>
+    <script src="javascript/handler/product-handler.js"></script>
+    <script src="javascript/httpMethod/product-http.js"></script>
+    <script src="javascript/model/product.js"></script>
+    
     <!--------------------------------------------JavaScript---------------------------------------------->
     <!-- JavaScript Bundle with Popper -->
     <script
