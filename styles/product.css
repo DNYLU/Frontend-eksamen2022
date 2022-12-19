@@ -1,3 +1,11 @@
+.product-container{
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+  border: 3px solid #2f3542;
+  border-radius: 10px;
+  
+}
+
 .product-operations{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,6 +25,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     grid-gap: 2vw;
+    max-height: 70vh;
+    overflow-y: auto;
   }
   
   .product-element {
@@ -65,3 +75,49 @@
       
   }
   
+
+  .productOrder-form{
+    border: 3px solid #2f3542;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    align-content: space-between;
+    margin-left: 5%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .product-element-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+  }
+  .product-editButton:hover{
+    background-color: #253760;
+    color: #ced6e0;
+  }
+  .product-deleteButton:hover{
+    background-color: #783831;
+    color: #ced6e0;
+  }
+
+  .product-updatesubmit-button{
+    background-color: #536b20;
+    color: #ced6e0;
+  
+  }
+
+  .product-updatesubmit-button:hover{
+    background-color: #405217;
+    color: #ced6e0;
+  }
+
+  .product-cancel{
+    background-color: #6d1f16;
+    color: #ced6e0;
+  }
+  .product-cancel:hover{
+    background-color: #51160f;
+    color: #ced6e0;
+  }
