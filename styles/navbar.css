@@ -12,7 +12,6 @@
   z-index: 4;
 }
 
-
 .rightNav {
   list-style-type: none;
   display: flex;
@@ -77,12 +76,9 @@
   margin-top: auto !important;
 }
 
-
-
 .material-symbols-outlined{
 display: flex;
 justify-content: center;
 align-items: center;
 font-size: 30px;
-
 }

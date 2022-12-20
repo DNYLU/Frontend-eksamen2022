@@ -14,6 +14,14 @@ async function getDeliveriesById(deliveryId) {
   return await makeRequest(BASE_URL + "/delivery/" + deliveryId, setting);
 }
 
+async function getVans() {
+  const setting = {
+    method: "GET",
+  };
+  const vans = await makeRequest(BASE_URL + "/van", setting);
+  return vans;
+}
+
 /*------------------------------GET------------------------------*/
 
 /*------------------------------POST------------------------------*/
@@ -26,5 +34,12 @@ async function postDeliveries(delivery) {
     body: JSON.stringify(delivery),
   };
   return await makeRequest(BASE_URL + "/delivery/add", settings);
+}
+
+async function postDeliveryToVan(vanId, deliveryId) {
+const settings = {
+  method: "POST",
+}
+return await makeRequest(BASE_URL + "/delivery/add/vanId/" + vanId + "/deliveryId/" + deliveryId, settings);
 }
 /*------------------------------POST------------------------------*/

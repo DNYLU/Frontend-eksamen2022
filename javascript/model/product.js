@@ -1,4 +1,5 @@
 showProducts(container, displayProducts); //Temporary homepage
+
 function displayProducts(container, products) {
   console.log(products);
   container.innerHTML = "";
@@ -53,7 +54,6 @@ const addLoopToProducts = (products) => {
 };
 
 
-
 //Create product element
 const  createProductElement = (product) => {
   const productContainerGrid = document.querySelector(".product-container-grid");
@@ -92,7 +92,7 @@ const  createProductElement = (product) => {
 const addEventListenerToDeleteProductButton = (product) => {
   $(`#delete-button-${product.id}`).click(async function () {
      await deleteProductById(product.id);
-      location.reload();
+     showProducts(container, displayProducts); 
 });
 };
 

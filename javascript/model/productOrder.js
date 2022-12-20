@@ -1,10 +1,7 @@
 /*----------------------DISPLAY PRODUCT ORDER------------------------*/
 const displayProductOrder = async (deliveryId) => { //Called in delivery.js
 const productOrders = await getProductOrdersByDeliveryId(deliveryId);
-
-
 container.innerHTML = "";
-
   container.innerHTML += `
   <div class="myDeliveries-deliveries-table">
   <table class="table table-hover">
@@ -29,7 +26,6 @@ productOrders.forEach((productOrder) => {
 });
 };
 
-
 const createProductOrderElement = (productOrder) => {
   const tableContainer = document.querySelector(".table");
   const tBodyContainer = document.createElement("tbody");
@@ -53,9 +49,6 @@ const createProductOrderElement = (productOrder) => {
   `;
 return
 };
-
-
-
 
 //Form for adding product order
 const displayProductOrderForm = (productContainer) => {
@@ -91,7 +84,6 @@ CALCULATE
 </button>
 </div>
 
-
 <div id="delivery-stats">
 
 </div>
@@ -106,7 +98,6 @@ ADD DELIVERY
 </div>
 </div>
 `;
-
   createDeliveryIdElement();
   addEventListenerToProductElement();
   calculateProductOrderButton();
@@ -120,9 +111,7 @@ const createDeliveryIdElement = async () => {
         <option value="${delivery.id}">${delivery.id}-${delivery.destination}</option>
         `;
   });
-  
 };
-
 /*----------------------DISPLAY PRODUCT ORDER------------------------*/
 
 /*----------------------POST PRODUCT ORDER------------------------*/
@@ -135,8 +124,8 @@ const addEventListenerToProductElement = () => {
   productOrderFormButton.addEventListener("click", async() => {
     const productOrder ={
         deliveryId: document.getElementById("addDeliveryInfo-id").value,
-        productId: document.getElementById("addDeliveryInfo-id").value,
-        quantity: document.getElementById("addDeliveryInfo-id").value,
+        productId: document.getElementById("addDeliveryInfo-productId").value,
+        quantity: document.getElementById("addDeliveryInfo-quantity").value,
     }
 
     await postProductOrder(productOrder);
@@ -144,7 +133,6 @@ const addEventListenerToProductElement = () => {
     location.reload();
   });
 };
-
 /*----------------------POST PRODUCT ORDER------------------------*/
 
 //?jQuery har jeg ikke kunne få til at fungere her. Idet har jeg desværre brugt en "cheap" løsning til opgaven
@@ -156,13 +144,10 @@ const calculateProductOrderButton = () =>{
         console.log(product)
         let totalPrice = quantity * product.price;
         let totalWeight = quantity * product.weight;
-
       
         deliveryStats.innerHTML=`
         <h3>Total Price: ${totalPrice},-</h3>
         <h3>Total Weight: ${totalWeight}g</h3>
-        
         `;
     })
-
 }
